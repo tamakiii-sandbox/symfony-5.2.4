@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: ${TARGET:-production-pseudo}
+    volumes:
+      - .:/local/symfony-5.2.4
