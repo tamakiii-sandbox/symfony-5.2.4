@@ -7,3 +7,19 @@ services:
       target: ${TARGET:-production-pseudo}
     volumes:
       - .:/local/symfony-5.2.4
+
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+      target: ${TARGET:-production-pseudo}
+    volumes:
+      - .:/local/symfony-5.2.4
+
+  node:
+    build:
+      context: .
+      dockerfile: node.dockerfile
+      target: ${TARGET:-production-pseudo}
+    volumes:
+      - .:/local/symfony-5.2.4

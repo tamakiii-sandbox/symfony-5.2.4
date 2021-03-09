@@ -34,4 +34,3 @@ RUN php80 -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" 
     php80 -r "unlink('composer-setup.php');"
 
 WORKDIR /local/symfony-5.2.4
-
