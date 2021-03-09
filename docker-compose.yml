@@ -23,3 +23,15 @@ services:
       target: ${TARGET:-production-pseudo}
     volumes:
       - .:/local/symfony-5.2.4
+
+  mysql:
+    image: mysql:8.0.23
+    volumes:
+      - .:/local/symfony-5.2.4
+      - mysql_data:/var/lib/myswl
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+
+volumes:
+  mysql_data:
+  node_modules:
