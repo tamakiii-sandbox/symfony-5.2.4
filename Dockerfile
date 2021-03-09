@@ -15,14 +15,14 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 
 RUN yum install -y \
       php80 \
-      php80-common \
-      php80-cli \
-      php80-json \
-      php80-fpm \
-      php80-opcache \
-      php80-process \
-      php80-mbstring \
-      php80-xml \
+      php80-php-common \
+      php80-php-cli \
+      php80-php-json \
+      php80-php-fpm \
+      php80-php-opcache \
+      php80-php-process \
+      php80-php-mbstring \
+      php80-php-xml \
       php80-php-mysqlnd
 
 RUN wget https://get.symfony.com/cli/installer -O - | bash
